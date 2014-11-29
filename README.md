@@ -46,6 +46,7 @@ example.json:
 ```
 
 3. invocation
+
 ```javascript
 //var html = readFromFile();
 var request = require('bravo');
@@ -54,7 +55,9 @@ var obj = bravo.Parse(jsonFile, html);
 console.log(obj)
 });
 ```
+
 4. result
+
 ```shell
 { title: 'rockdragon/bravo', heading: 'example repository.' }
 ```
