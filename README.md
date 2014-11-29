@@ -30,7 +30,7 @@ Run
 &lt;/div&gt;
 </pre>
 
-* Configuration is a JSON file:
+* JSON-like configuration file:
    * {expr} gives the RegExp
    * {g} indicates the group number of the RegExp; return the all groups if {g} absent.
 
@@ -59,7 +59,7 @@ console.log(obj)
 });
 ```
 
-* Result:
+* Result is a object which had been defined in the JSON file:
 
 ```shell
 { title: 'rockdragon/bravo', heading: 'example repository.' }
