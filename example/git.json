@@ -1,0 +1,10 @@
+{
+  "title": {
+    "expr": "<title>([^<]+)</title>",
+    "g": 1
+  },
+  "heading": {
+    "expr": "<div class=\"wrapper\">\\s+<h1>([^<]+)</h1>",
+    "g": 1
+  }
+}
