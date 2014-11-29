@@ -42,8 +42,7 @@ Run
   },
   "heading": {
     "expr": "<div class=\"wrapper\">\\s+<h1>([^<]+)</h1>",
-    "g":
-     1
+    "g": 1
   }
 }
 ```     
