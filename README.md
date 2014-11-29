@@ -19,7 +19,7 @@ Installation
 
 Run
 ======
-* HTML input
+* HTML input:
 <pre>
 &lt;head&gt;
     &lt;title&gt;rockdragon/bravo&lt;/title&gt;
@@ -30,7 +30,7 @@ Run
 &lt;/div&gt;
 </pre>
 
-* configuration
+* Configuration:
    * {expr} gives the RegExp
    * {g} indicates the group number of the RegExp; return the all groups if {g} absent.
 
@@ -48,7 +48,7 @@ Run
 }
 ```     
 
-* invocation
+* Invocation:
 
 ```javascript
 //var html = readFromFile();
@@ -59,7 +59,7 @@ console.log(obj)
 });
 ```
 
-* result
+* Result:
 
 ```shell
 { title: 'rockdragon/bravo', heading: 'example repository.' }
