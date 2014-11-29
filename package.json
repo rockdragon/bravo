@@ -1,0 +1,42 @@
+{
+  "name": "bravo",
+  "version": "0.0.4",
+  "description": "simplified Regular Expression pattern match framework based on RegExp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive --timeout 15000 -R spec --require should test/ --bail",
+    "test-travis": "node node_modules/istanbul-harmony/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -u exports --require should  --timeout 15000  --recursive test/ --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rockdragon/bravo.git"
+  },
+  "keywords": [
+    "RegExp",
+    "Regular Expression",
+    "Pattern",
+    "Match",
+    "正则匹配"
+  ],
+  "author": {
+    "name": "Mo Ye",
+    "email": "moyerock@gmail.com",
+    "url": "http://www.moye.me/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "istanbul-harmony": "*",
+    "coveralls": "*",
+    "should": "*",
+    "mocha": "*",
+    "expect.js": "*",
+    "mocha-lcov-reporter": "*"
+  },
+  "engines": {
+    "node": ">= 0.10.33"
+  },
+  "bugs": {
+    "url": "https://github.com/rockdragon/bravo/issues"
+  },
+  "homepage": "https://github.com/rockdragon/bravo"
+}
