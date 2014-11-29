@@ -19,7 +19,7 @@ Installation
 
 Run
 ======
-1. HTML input
+* HTML input
 <pre>
 &lt;head&gt;
     &lt;title&gt;rockdragon/bravo&lt;/title&gt;
@@ -30,8 +30,8 @@ Run
 &lt;/div&gt;
 </pre>
 
-2. configuration
-example.json:
+* configuration
+
 ```JSON
 {
   "title": {
@@ -45,7 +45,7 @@ example.json:
 }
 ```
 
-3. invocation
+* invocation
 
 ```javascript
 //var html = readFromFile();
@@ -56,7 +56,7 @@ console.log(obj)
 });
 ```
 
-4. result
+* result
 
 ```shell
 { title: 'rockdragon/bravo', heading: 'example repository.' }
