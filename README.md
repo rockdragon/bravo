@@ -45,9 +45,9 @@ Run
 }
 ```
 
-   - in which:
-     - {expr} gives the RegExp
-     - {g} indicates the group number of the RegExp; return the all groups if {g} absent.
+     - in which:
+       - {expr} gives the RegExp
+       - {g} indicates the group number of the RegExp; return the all groups if {g} absent.
 
 * invocation
 
