@@ -31,6 +31,8 @@ Run
 </pre>
 
 * configuration
+   * {expr} gives the RegExp
+   * {g} indicates the group number of the RegExp; return the all groups if {g} absent.
 
 ```JSON
 {
@@ -40,14 +42,11 @@ Run
   },
   "heading": {
     "expr": "<div class=\"wrapper\">\\s+<h1>([^<]+)</h1>",
-    "g": 1
+    "g":
+     1
   }
 }
-```
-
-   * in which:
-     * {expr} gives the RegExp
-     * {g} indicates the group number of the RegExp; return the all groups if {g} absent.
+```     
 
 * invocation
 
