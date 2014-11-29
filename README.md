@@ -35,11 +35,11 @@ example.json:
 ```JSON
 {
   "title": {
-    "expr": "&lt;title&gt;([^&lt;]+)&lt;/title&gt;",
+    "expr": "<title>([^<]+)</title>",
     "g": 1
   },
   "heading": {
-    "expr": "&lt;div class=\"wrapper\"&gt;\\s+&lt;h1&gt;([^<]+)&lt;/h1&gt;",
+    "expr": "<div class=\"wrapper\">\\s+<h1>([^<]+)</h1>",
     "g": 1
   }
 }
