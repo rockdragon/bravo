@@ -30,7 +30,7 @@ Run
 &lt;/div&gt;
 </pre>
 
-* Configuration:
+* Configuration is a JSON file:
    * {expr} gives the RegExp
    * {g} indicates the group number of the RegExp; return the all groups if {g} absent.
 
