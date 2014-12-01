@@ -33,6 +33,7 @@ Run
 * JSON-like configuration file:
    * {expr} gives the RegExp
    * {g} indicates the group number of the RegExp; return the all groups if {g} absent.
+   * {replace} is used for result substitution, it contains two fields : {a} represent source, and {b} represent destination.
 
 ```JSON
 {
@@ -43,6 +44,10 @@ Run
   "heading": {
     "expr": "<div class=\"wrapper\">\\s+<h1>([^<]+)</h1>",
     "g": 1
+  },
+  "replace": {
+    "a": "[^\\S]+",
+    "b": ""
   }
 }
 ```     

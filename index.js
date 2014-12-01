@@ -25,12 +25,18 @@ function Parse(jsonFile, input) {
         jsonObj = JSON.parse(json);
 
         for (var key in jsonObj) {
-            var expr = jsonObj[key].expr, g = jsonObj[key].g;
+            var regObj = jsonObj[key];
+            var expr = regObj.expr, g = regObj.g,
+                replace = regObj.replace;
             if (expr) {
                 var match = new RegExp(expr, 'gmi').exec(input);
                 if (match) {
                     obj[key] = g ? match[g] : match;
                 }
+            }
+            if(obj[key] && replace){
+                var source = new RegExp(replace.a, 'gmi');
+                obj[key] = obj[key].replace(source, replace.b);
             }
         }
     } catch (e) {
