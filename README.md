@@ -26,7 +26,7 @@ Run
 &lt;/head&gt;
 &lt;body&gt;
 &lt;div class=&quot;wrapper&quot;&gt;
-    &lt;h1&gt;example repository.&lt;/h1&gt;
+    &lt;h1&gt;example repository.\r\n&lt;/h1&gt;
 &lt;/div&gt;
 </pre>
 
@@ -45,9 +45,9 @@ Run
     "expr": "<div class=\"wrapper\">\\s+<h1>([^<]+)</h1>",
     "g": 1
   },
-  "replace": {
-    "a": "[^\\S]+",
-    "b": ""
+  "replace":{
+    "a":"\\\\r\\\\n",
+    "b":""
   }
 }
 ```     

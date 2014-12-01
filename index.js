@@ -36,6 +36,7 @@ function Parse(jsonFile, input) {
             }
             if(obj[key] && replace){
                 var source = new RegExp(replace.a, 'gmi');
+                console.log(obj[key], source);
                 obj[key] = obj[key].replace(source, replace.b);
             }
         }
