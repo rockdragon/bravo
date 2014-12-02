@@ -1,6 +1,6 @@
 {
   "name": "bravo",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "simplified Regular Expression pattern match framework based on RegExp.",
   "main": "index.js",
   "scripts": {
