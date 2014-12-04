@@ -33,7 +33,7 @@ Run
 * JSON-like configuration file:
    * {expr} gives the RegExp
    * {g} indicates the group number of the RegExp; return the all groups if {g} absent.
-   * {replace} is used for result substitution, it contains two fields : {a} represent source, and {b} represent destination.
+   * {replace} is used for result substitution, it could be either an array or an object whose contains two fields : {a} represent source, and {b} represent destination.
 
 ```JSON
 {
@@ -45,10 +45,16 @@ Run
     "expr": "<div class=\"wrapper\">\\s+<h1>([^<]+)</h1>",
     "g": 1
   },
-  "replace":{
-    "a":"\\\\r\\\\n",
-    "b":""
-  }
+  "replace": [
+      {
+        "a": "\\\\r\\\\n",
+        "b": ""
+      },
+      {
+        "a": "example",
+        "b": "awesome"
+      }
+  ]
 }
 ```     
 
@@ -66,7 +72,7 @@ console.log(obj)
 * Result is a object which had been defined in the JSON file:
 
 ```shell
-{ title: 'rockdragon/bravo', heading: 'example repository.' }
+{ title: 'rockdragon/bravo', heading: 'awesome repository.' }
 ```
 
 License

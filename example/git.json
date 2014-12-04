@@ -6,9 +6,15 @@
   "heading": {
     "expr": "<div class=\"wrapper\">\\s+<h1>([^<]+)</h1>",
     "g": 1,
-    "replace":{
-      "a":"\\\\r\\\\n",
-      "b":""
-    }
+    "replace": [
+      {
+        "a": "\\\\r\\\\n",
+        "b": ""
+      },
+      {
+        "a": "example",
+        "b": "awesome"
+      }
+    ]
   }
 }

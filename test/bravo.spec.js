@@ -13,7 +13,7 @@ describe('bravo testing', function () {
         obj['title'].should.not.equal(null);
         obj['title'].should.equal('rockdragon/bravo');
         obj['heading'].should.not.equal(null);
-        obj['heading'].should.equal('example repository.');
+        obj['heading'].should.equal('awesome repository.');
     });
 });
 

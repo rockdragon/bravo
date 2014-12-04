@@ -13,11 +13,9 @@
      {expr} gives the RegExp
      {g} indicates the group number of the RegExp; return the all groups if {g} absent.
  */
-var path = require('path');
 var fs = require('fs');
 
 module.exports.Parse = Parse;
-
 function Parse(jsonFile, input) {
     var obj = {}, jsonObj = null;
     try {
@@ -35,13 +33,31 @@ function Parse(jsonFile, input) {
                 }
             }
             if(obj[key] && replace){
-                var source = new RegExp(replace.a, 'gmi');
-                obj[key] = obj[key].replace(source, replace.b);
+                if(isArray(replace)){
+                    for(var i= 0, len = replace.length; i< len;i++){
+                        replaceByExpr(obj, key, replace[i].a, replace[i].b);
+                    }
+                } else {
+                    replaceByExpr(obj, key, replace.a, replace.b);
+                }
             }
         }
     } catch (e) {
         console.log('[reading JSON error]', e.stack);
     }
-
     return obj;
+}
+
+/*
+* utilities
+* */
+function getObjectType(obj) {
+    return Object.prototype.toString.call(obj);
+}
+function isArray(obj) {
+    return getObjectType(obj) === '[object Array]';
+}
+function replaceByExpr(obj, key, a, b){
+    var source = new RegExp(a, 'gmi');
+    obj[key] = obj[key].replace(source, b);
 }
