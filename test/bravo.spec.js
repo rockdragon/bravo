@@ -14,6 +14,7 @@ describe('bravo testing', function () {
         obj['title'].should.equal('rockdragon/bravo');
         obj['heading'].should.not.equal(null);
         obj['heading'].should.equal('awesome repository.');
+        obj['titleAndheading'].should.equal('rockdragon/bravo - awesome repository.');
     });
 });
 

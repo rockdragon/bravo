@@ -16,5 +16,28 @@
         "b": "awesome"
       }
     ]
+  },
+  "titleAndheading": {
+    "expr": [
+      {
+        "expr": "<title>([^<]+)</title>",
+        "g": 1
+      },
+      {
+        "expr": "<div class=\"wrapper\">\\s+<h1>([^<]+)</h1>",
+        "g": 1
+      }
+    ],
+    "sep": " - ",
+    "replace": [
+      {
+        "a": "\\\\r\\\\n",
+        "b": ""
+      },
+      {
+        "a": "example",
+        "b": "awesome"
+      }
+    ]
   }
 }

@@ -31,8 +31,9 @@ Run
 </pre>
 
 * JSON-like configuration file:
-   * {expr} gives the RegExp
-   * {g} indicates the group number of the RegExp; return the all groups if {g} absent.
+   * {expr} represents either regular expression string, or an array composed of : [{ expr:"", g:1},...]
+   * {g} represents either the group number of the RegExp; return the all groups if {g} absent; it should not exist when {expr} was an array.
+   * {sep} represents a separator be used to concatenate result when {expr} was an array.
    * {replace} is used for result substitution, it could be either an array or an object whose contains two fields : {a} represent source, and {b} represent destination.
 
 ```JSON
@@ -43,9 +44,8 @@ Run
   },
   "heading": {
     "expr": "<div class=\"wrapper\">\\s+<h1>([^<]+)</h1>",
-    "g": 1
-  },
-  "replace": [
+    "g": 1,
+    "replace": [
       {
         "a": "\\\\r\\\\n",
         "b": ""
@@ -54,7 +54,31 @@ Run
         "a": "example",
         "b": "awesome"
       }
-  ]
+    ]
+  },
+  "titleAndheading": {
+    "expr": [
+      {
+        "expr": "<title>([^<]+)</title>",
+        "g": 1
+      },
+      {
+        "expr": "<div class=\"wrapper\">\\s+<h1>([^<]+)</h1>",
+        "g": 1
+      }
+    ],
+    "sep": " - ",
+    "replace": [
+      {
+        "a": "\\\\r\\\\n",
+        "b": ""
+      },
+      {
+        "a": "example",
+        "b": "awesome"
+      }
+    ]
+  }
 }
 ```     
 
@@ -72,7 +96,9 @@ console.log(obj)
 * Result is a object which had been defined in the JSON file:
 
 ```shell
-{ title: 'rockdragon/bravo', heading: 'awesome repository.' }
+{ title: 'rockdragon/bravo',
+  heading: 'awesome repository.',
+  titleAndheading: 'rockdragon/bravo - awesome repository.' }
 ```
 
 License
